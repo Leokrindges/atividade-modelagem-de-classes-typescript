@@ -1,4 +1,3 @@
-
 // 1. Crie uma classe Contador, que encapsule um valor usado para
 // contagem de itens ou eventos. A classe deve oferecer métodos que
 // devem:
@@ -6,7 +5,7 @@
 // b) Incrementar;
 // c) Retornar o valor do contador.
 
-import{ Contador,} from './classes/contador'
+import { Contador } from './classes/contador'
 
 const contador: Contador = new Contador(5)
 
@@ -25,7 +24,7 @@ console.log(contador.retornarValorContador());
 // i. Trocar Cor
 // ii. Mostrar cor
 
-import { Bola} from './classes/bola'
+import { Bola } from './classes/bola'
 
 const bola: Bola = new Bola("Amarela", 35, "Tecido")
 
@@ -46,8 +45,8 @@ console.log(bola.mostrarCor());
 // demais atributos são obrigatórios. A conta não pode ficar com saldo
 // negativo.
 
-import { Conta} from './classes/conta'
-const conta: Conta = new Conta(12345,"Leonardo")
+import { Conta } from './classes/conta'
+const conta: Conta = new Conta(12345, "Leonardo")
 
 conta.alterarNome("Jhon Doe")
 console.log(conta.saque(100));
@@ -63,8 +62,14 @@ console.log(conta);
 // b. Esta classe deve iniciar com o histórico vazio
 // c. Esta classe deve conter uma ação para visualizar o histórico.
 
+import { Calculadora } from './classes/calculadora';
 
-
+const soma: Calculadora = new Calculadora()
+soma.soma(10, 5)
+soma.subtrair(10, 5)
+soma.divisao(10, 5)
+soma.multiplicacao(10, 5)
+soma.mostraHistorico()
 
 // 5. Faça um programa completo utilizando classes e métodos que:
 // a. Possua uma classe chamada BombaCombustivel, com no
@@ -89,9 +94,12 @@ console.log(conta);
 // atualizar a quantidade de combustível total na bomba. Não deve ser
 // possível abastecer se não tiver gasolina suficiente na bomba.
 
-
-
-
+import { BombaCombustivel } from './classes/bombaCombustivel';
+const abastecimento: BombaCombustivel = new BombaCombustivel("Gasolina", 5.41, 20)
+abastecimento.alterarValor(8)
+abastecimento.abastecerPorLitro(15)
+abastecimento.abastecerPorValor(26)
+abastecimento.mostraCombustivelDisponivel()
 
 
 
@@ -109,3 +117,10 @@ console.log(conta);
 // d. Forneça um método obterGasolina(), que retorna o nível atual
 // de combustível e forneça um método adicionarGasolina(),
 // para abastecer o tanque.
+
+import { Carro } from './classes/carro';
+
+const carro: Carro = new Carro(10.2, 50)
+carro.adicionarGasolina(50)
+carro.andar(4)
+carro.obterCombustivel()

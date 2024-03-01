@@ -1,6 +1,6 @@
 export class Contador {
     constructor(
-        public valor: number
+        public valor: number = 0
     ) { }
 
     zerarContador() {
@@ -12,6 +12,7 @@ export class Contador {
     }
 
     retornarValorContador() {
+        
         return this.valor
     }
 }
