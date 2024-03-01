@@ -6,7 +6,7 @@
 
 ### Inicializar projeto Node
 
-> npm install | yarn install
+> npm install
 
 ### Rodar programa
 
